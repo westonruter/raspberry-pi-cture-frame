@@ -1,0 +1,3 @@
+[submodule "www/dashicons"]
+	path = www/dashicons
+	url = https://github.com/WordPress/dashicons.git

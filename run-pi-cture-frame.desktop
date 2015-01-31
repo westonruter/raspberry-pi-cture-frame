@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Pi-cture Frame
+Comment=Open Chromium to play Pi-cture Frame
+Icon=/usr/share/pixmaps/openbox.xpm
+Exec=/bin/bash {{APP_DIR}}/run-pi-cture-frame.sh
+Type=Application
+Encoding=UTF-8
+Terminal=false
+Categories=None

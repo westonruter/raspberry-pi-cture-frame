@@ -1,0 +1,87 @@
+
+html {
+	background: black;
+	color: white;
+	font-family: sans-serif;
+}
+.loading,
+.error {
+	position: fixed;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	font-size: 2em;
+}
+
+.loading {
+	color: white;
+}
+.error {
+	color: red;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.controls {
+	font-family: Verdana, sans-serif;
+	position: fixed;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, -0%);
+	user-select: none;
+	-webkit-user-select: none;
+}
+.controls .control {
+	opacity: 0.5;
+	text-decoration: none;
+	color: white;
+	text-shadow: 0 0 2px black;
+	display: inline-block;
+	padding-top: 4em;
+	padding-bottom: 0.5em;
+	cursor: pointer;
+}
+.controls .pause,
+.controls .play,
+.controls .speed {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.controls .previous {
+	padding-left: 4em;
+	padding-right: 1em;
+}
+.controls .next {
+	padding-right: 4em;
+	padding-left: 1em;
+}
+.controls .control:hover,
+.controls .control:active {
+	opacity: 1.0;
+	outline: none;
+}
+
+.slide > img {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	object-fit: contain;
+}
+.caption {
+	position: fixed;
+	top: 2px;
+	text-shadow: 0 0 1px black;
+	width: 100%;
+	display: block;
+	text-align: center;
+	opacity: 0.75;
+}

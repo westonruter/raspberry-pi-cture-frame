@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Pi-cture Frame</title>
+		<link rel="stylesheet" type="text/css" href="/dashicons/css/dashicons.css">
+		<link rel="stylesheet" type="text/css" href="/style.css">
+	</head>
+	<body>
+		<div id="app">
+			<em class="loading">Loading&hellip;</em>
+		</div>
+		<script id="root-template" type="text/template">
+			<# if ( data.error ) { #>
+				<div class="error">
+					<p><strong>Error:</strong> {{ data.error }}</p>
+				</div>
+			<# } else { #>
+				<div class="slide">
+					<img src="{{ data.local_src }}">
+					<div class="caption">
+						<time class="timestamp" datetime="{{ data.datetime }}">
+							{{ data.datetimeLocale }}
+						</time>
+					</div>
+				</div>
+				<div class="controls">
+					<span class="control previous" tabindex="0">
+						<span class="dashicons dashicons-controls-back"></span>
+					</span>
+					<# if ( data.paused ) { #>
+						<span class="control play" tabindex="0">
+							<span class="dashicons dashicons-controls-play"></span>
+						</span>
+					<# } else { #>
+						<span class="control pause" tabindex="0">
+							<span class="dashicons dashicons-controls-pause"></span>
+						</span>
+					<# } #>
+					<span class="control speed" tabindex="0">
+						{{ data.slideDuration < 1000 ? ( data.slideDuration / 1000 ).toPrecision( 1 ) : data.slideDuration / 1000 }}s
+					</span>
+					<span class="control next" tabindex="0">
+						<span class="dashicons dashicons-controls-forward"></span>
+					</span>
+				</div>
+			<# } #>
+		</script>
+		<script src="/jquery.js"></script>
+		<script src="/underscore.js"></script>
+		<script src="/backbone.js"></script>
+		<script src="/app.js"></script>
+	</body>
+</html>

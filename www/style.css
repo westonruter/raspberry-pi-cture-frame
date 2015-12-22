@@ -51,6 +51,9 @@ ul, li {
 	padding-left: 1em;
 	padding-right: 1em;
 }
+.controls .speed {
+	font-weight: bold;
+}
 .controls .previous {
 	padding-left: 4em;
 	padding-right: 1em;

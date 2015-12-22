@@ -81,10 +81,17 @@ ul, li {
 }
 .caption {
 	position: fixed;
-	top: 2px;
+	top: 0px;
+	padding: 2px 4px;
+	font-size: smaller;
 	text-shadow: 0 0 1px black;
-	width: 100%;
 	display: block;
 	text-align: center;
-	opacity: 0.75;
+
+	color: white;
+	letter-spacing: 2px;
+	background-color: rgba( 0, 0, 0, 0.35 );
+	opacity: 0.5;
+	left: 50%;
+	transform: translate(-50%, 0%);
 }

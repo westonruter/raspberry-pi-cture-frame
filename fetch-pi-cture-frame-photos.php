@@ -53,7 +53,7 @@ $photo_cache_dir = __DIR__ . '/www/photo-cache/';
 $photo_manifest = array();
 
 foreach ( $data['feed']['entry'] as $i => $entry ) {
-	printf( "Processing %d of %d...", $i + 1, count( $data['feed']['entry'] ) );
+	printf( "Processing %d of %d...\n", $i + 1, count( $data['feed']['entry'] ) );
 
 	if ( 'image/jpeg' !== $entry['content']['type'] ) {
 		echo sprintf( "Skipping unsupported type for %s\n", $entry['id']['$t'] );

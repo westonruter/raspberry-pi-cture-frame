@@ -25,8 +25,8 @@ cat run-pi-cture-frame.desktop | sed "s:{{APP_DIR}}:$app_dir:" > ~/Desktop/run-p
 if ! crontab -l | grep -qs 'fetch-pi-cture-frame-photos.php'; then
 	echo "Installed crontab"
 	(crontab -l 2>/dev/null; echo "") | crontab -
-	(crontab -l 2>/dev/null; echo "0 * * * * /usr/bin/php $app_dir/fetch-pi-cture-frame-photos.php") | crontab -
-	(crontab -l 2>/dev/null; echo "0 12 * * * cd $app_dir && git pull") | crontab -
+	(crontab -l 2>/dev/null; echo "5 * * * * /usr/bin/php $app_dir/fetch-pi-cture-frame-photos.php") | crontab -
+	(crontab -l 2>/dev/null; echo "0 * * * * cd $app_dir && git pull --no-edit --ff-only") | crontab -
 fi
 
 sudo service nginx restart

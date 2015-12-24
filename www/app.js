@@ -288,7 +288,7 @@ var app = (function() {
 					{
 						next_photo_src: view.getNextPhoto().get( 'local_src' ),
 						prev_photo_src: view.getPreviousPhoto().get( 'local_src' ),
-						datetimeLocale: datetime.toLocaleDateString() + ' ' + datetime.toLocaleTimeString()
+						datetimeLocale: datetime.toLocaleDateString()
 					},
 					view.state.attributes,
 					view.getCurrentPhoto().attributes

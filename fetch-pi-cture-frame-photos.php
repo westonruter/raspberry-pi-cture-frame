@@ -78,7 +78,7 @@ foreach ( $data['feed']['entry'] as $i => $entry ) {
 	// Parse the datetime out of the metadata. For some reason it is not presented in a machine-readable form.
 	$entry['datetime'] = null;
 	if ( preg_match( '/\w(?P<month>\w+) (?P<day>\d+), (?P<year>\d\d\d\d), (?P<hour>\d+):\d\d (AM|PM)/', $entry['summary']['$t'], $matches ) ) {
-		$entry['datetime'] = date( 'c', strtotime( $matches[0] ) );
+		$entry['datetime'] = date( 'c', strtotime( $matches[0] . ' GMT' ) );
 	} else {
 		// @todo Fallback to looking at the filename.
 	}
